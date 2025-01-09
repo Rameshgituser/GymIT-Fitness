@@ -8,6 +8,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+
 .nav {
   position: fixed;
   display: flex;
@@ -15,13 +17,15 @@ html {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem 1.5rem;
-  background: #222;
+  padding: 1rem;
+  background: rgba(33, 45, 57, 0.8);
   z-index: 100000;
 }
 .nav h2 {
-  color: #fff;
-  font-size: 1.7rem;
+  color: #ed0121;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding-left: 5px;
 }
 #item {
   display: flex;
@@ -33,18 +37,28 @@ html {
   list-style: none;
   padding-right: 50px;
 }
-#item li a {
+.nav #item>li>a {
   text-decoration: none;
-  font-size: 1rem;
-  text-transform: uppercase;
+  font-size: 1.3rem;
   color: #fff;
-  transition: all 0.3s ease-out;
+  font-weight: bold;
+  -webkit-transition:all 0.4s;
+  -moz-transition:all 0.4s;
+  -o-transition:all 0.4s;
+  transition:all 0.4s;
+  cursor: pointer;
 }
-#item li a:hover,
+
+.nav #item>li>a:hover,.nav #item>.active>a {
+  color:#ed0121;
+  text-shadow:none;
+ 
+}
+/* #item li a:hover,
 #item .icon i:hover {
   color: #ff5733;
   cursor: pointer;
-}
+} */
 #item .icon i {
   color: #fff;
   padding-right: 30px;
@@ -56,7 +70,7 @@ html {
   display: none;
 }
 .back {
-  background-image: url(../img/bg.jpg);
+  background-image: url(../img/night.jpg);
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -66,10 +80,10 @@ html {
 /* banner-section */
 
 .back .overlay {
-  background: #171819;
+  background: rgba(44, 33, 5, 0.2);
   width: 100%;
   height: 100%;
-  opacity: 0.85;
+  
 }
 
 .mid {
@@ -80,12 +94,24 @@ html {
   text-align: center;
 }
 
-.mid p {
-  color: #7f8c8d;
-  font-size: 1.3rem;
-  margin-bottom: 1.4rem;
+.mid h1 {
+  font-size: 50px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  background: #ed0121;
+  padding: 0px 18px;
+  /* margin-bottom: 1.4rem; */
 }
-
+.mid-subtitle h4{
+  display: inline-block;
+    background: white;
+    color: #ed0121;
+    font-size: 38px;
+    padding: 0px 15px;
+    text-transform: uppercase;
+}
 .mid h2 {
   color: #fff;
   font-size: 3rem;
@@ -476,14 +502,17 @@ h6 {
 
 /* media-query */
 
+
+
+
 @media screen and (max-width: 1042px) {
-  .nav {
+  /* .nav {
     padding: 1rem 4.5rem;
   }
 
   .nav h2 {
     font-size: 1.4rem;
-  }
+  } */
   #item li {
     padding-left: 30px;
   }
@@ -496,14 +525,44 @@ h6 {
   }
 }
 
-@media screen and (max-width: 991px) {
-  .nav {
-    padding: 1rem 3rem;
-  }
-  .nav h2 {
-    color: #fff;
-    font-size: 1.6rem;
-  }
+@media screen and (max-width: 768px) {
+    /* .nav {
+      padding: 1rem 3rem;
+    }
+    .nav h2 {
+      color: #fff;
+      font-size: 1.6rem;
+    } */
+
+    .nav {
+      position: fixed;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      background: rgba(33, 45, 57, 0.8);
+      z-index: 100000;
+    }
+
+    .mid h1 {
+      font-size: 30px;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      display: inline-block;
+      background: #ed0121;
+      padding: 0px 18px;
+      /* margin-bottom: 1.4rem; */
+    }
+    .mid-subtitle h4{
+      display: inline-block;
+        background: white;
+        color: #ed0121;
+        font-size: 25px;
+        padding: 0px 15px;
+        text-transform: uppercase;
+    }
   #item {
     flex-direction: column;
     text-align: center;
@@ -517,6 +576,7 @@ h6 {
     margin-top: 4.5rem;
     transition: 0.5s;
   }
+
   #item li {
     padding-right: 0;
     padding: 4px 0;
@@ -772,13 +832,42 @@ h6 {
   }
 }
 
+.nav h1{
+  color:white;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
+
+  .nav h1{
+    color:white;
+    font-weight: bold;
+    font-size: 30px;
+    display: block;
+    margin-left: -18%;
+  }
+
+  
+  .nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: rgba(33, 45, 57, 0.8);
+    z-index: 100000;
+  }
   .nav h2 {
     font-size: 1.5rem;
   }
   .back {
     background-position: center;
   }
+
   .mid p {
     font-size: 1rem;
     margin-bottom: 1rem;
