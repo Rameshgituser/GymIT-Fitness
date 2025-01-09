@@ -570,10 +570,11 @@ h6 {
     height: 80vh;
     position: fixed;
     top: 0;
+    left:48%;
     right: -300px;
     background: rgb(0, 0, 0, 0.8);
     z-index: 100000;
-    margin-top: 4.5rem;
+    /* margin-top: 4.5rem; */
     transition: 0.5s;
   }
 
