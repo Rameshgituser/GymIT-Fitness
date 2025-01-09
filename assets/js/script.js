@@ -1,9 +1,13 @@
+
 var menu = document.getElementById("bar");
 var item = document.getElementById("item");
 
 item.style.right = "-300px";
 
 menu.onclick = function () {
+  
+  console.log('Menu clicked');
+  
   if (item.style.right == "-300px") {
     item.style.right = "0";
   } else {

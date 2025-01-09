@@ -338,7 +338,7 @@ section::before,section::after {
     font-weight:bold;
 }
 .pricing .pricing-item .pricing-item-details {
-    margin-left:265px;
+     margin-left:265px; 
 }
 .pricing .pricing-item .pricing-item-details h3 {
     margin-top:0;
