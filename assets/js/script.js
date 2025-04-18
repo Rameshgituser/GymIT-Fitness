@@ -1,4 +1,21 @@
 
+// $(window).on("scroll", function() {
+//   if ($(this).scrollTop() > 100) {
+//       $("#header-bar").addClass("scrolled");
+//   } else {
+//       $("#header-bar").removeClass("scrolled");
+//   }
+// });
+
+window.addEventListener("scroll", function () {
+  const header = document.getElementById("header-bar");
+  if (window.scrollY > 100) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+
 var menu = document.getElementById("bar");
 var item = document.getElementById("item");
 
@@ -14,3 +31,5 @@ menu.onclick = function () {
     item.style.right = "-300px";
   }
 };
+
+

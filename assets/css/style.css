@@ -55,6 +55,44 @@ html {
  margin-top: 2px;
 
 }
+
+/* Default state (before scroll) */
+#header-bar .header-internal {
+  border: 1px solid rgba(0, 0, 0, 0);
+  transition: all 0.3s ease-in-out;
+}
+#header-bar.scrolled .header-internal{
+  /* change the navbar background colour & add blur */
+
+    background: rgba(0, 0, 0, 0.4)!important;
+    backdrop-filter: blur(7px);
+    /* pushes nav container away from edges */
+     margin: 20px 40px;
+     /* add rouded edges*/
+     border-radius: 100px;
+     border:1px solid rgba(0, 0, 0, 0.8);
+}
+#header-bar.scrolled .navbar-nav > li > a {
+  color: #fff !important;
+}
+#header-bar {
+  z-index: 9999; /* Make sure it's on top */
+}
+
+@media (max-width: 767px) {
+  #header-bar.scrolled .header-internal {
+    margin: 10px 10px !important;
+    border-radius: 30px;
+  }
+}
+@media (max-width: 767px) {
+  #header-bar.scrolled .header-internal {
+    margin: 10px 10px !important;
+    border-radius: 30px;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+}
 .nav h2 {
   color: #ed0121;
   font-size: 1.5rem;
